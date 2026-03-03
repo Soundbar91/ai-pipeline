@@ -24,6 +24,9 @@ public enum ErrorCode {
     // School
     SCHOOL_NOT_FOUND(HttpStatus.NOT_FOUND, "학교를 찾을 수 없습니다."),
 
+    // Schedule
+    INVALID_SCHEDULE_PARAMETER(HttpStatus.BAD_REQUEST, "잘못된 일정 조회 파라미터입니다."),
+
     // General
     INVALID_REQUEST(HttpStatus.BAD_REQUEST, "잘못된 요청입니다.");
 
