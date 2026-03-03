@@ -44,6 +44,12 @@ public class User {
     @JoinColumn(name = "school_id")
     private School school;
 
+    @Column(name = "department")
+    private String department;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserStatus status;
