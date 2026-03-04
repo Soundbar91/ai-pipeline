@@ -1,0 +1,67 @@
+name: "🐛 버그 리포트"
+description: 버그나 오류를 신고합니다.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그 신고 시 아래 양식을 최대한 상세히 작성해 주세요.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 버그 요약
+      description: 발생한 버그를 간략히 설명해 주세요.
+      placeholder: 어떤 문제가 발생했는지 한두 문장으로 요약해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현하기 위한 단계를 작성해 주세요.
+      placeholder: |
+        1. ...
+        2. ...
+        3. 에러 발생
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 동작
+      description: 정상적으로 동작했을 때 어떤 결과가 나와야 하나요?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 동작
+      description: 실제로 어떤 결과가 발생했나요? (에러 메시지, 스택 트레이스 등 포함)
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 버그가 발생한 환경을 작성해 주세요.
+      placeholder: |
+        - OS: macOS 14.x
+        - Java: 21
+        - Spring Boot: 3.5.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: etc
+    attributes:
+      label: 기타 사항
+      description: 참고할 자료나 추가 정보를 작성해 주세요.
+    validations:
+      required: false

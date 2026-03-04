@@ -1,0 +1,58 @@
+name: "✨ 기능 요청"
+description: 새로운 기능 개발을 요청합니다.
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        새로운 기능 요청 시 아래 양식을 작성해 주세요.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 기능 요약
+      description: 추가하려는 기능을 간략히 설명해 주세요.
+      placeholder: 어떤 기능인지 한두 문장으로 요약해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 배경 및 목적
+      description: 이 기능이 왜 필요한지 설명해 주세요.
+      placeholder: 이 기능을 통해 해결하고자 하는 문제나 달성하려는 목표를 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 상세 구현 내용
+      description: 구현해야 할 내용을 구체적으로 작성해 주세요.
+      placeholder: |
+        - API 엔드포인트: POST /api/v1/example
+        - 요청/응답 형식
+        - 비즈니스 로직
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 조건
+      description: 이슈가 완료되었다고 판단할 수 있는 기준을 작성해 주세요.
+      placeholder: |
+        - [ ] API 응답이 명세와 일치한다
+        - [ ] 예외 처리가 구현되어 있다
+    validations:
+      required: false
+
+  - type: textarea
+    id: etc
+    attributes:
+      label: 기타 사항
+      description: 참고할 자료나 추가 정보를 작성해 주세요.
+    validations:
+      required: false
