@@ -27,6 +27,13 @@ public enum ErrorCode {
     // Schedule
     INVALID_SCHEDULE_PARAMETER(HttpStatus.BAD_REQUEST, "잘못된 일정 조회 파라미터입니다."),
 
+    // Study
+    STUDY_SESSION_ALREADY_RUNNING(HttpStatus.CONFLICT, "이미 진행 중인 공부 세션이 있습니다."),
+    STUDY_SESSION_NOT_FOUND(HttpStatus.NOT_FOUND, "진행 중인 공부 세션이 없습니다."),
+
+    // Club
+    CLUB_NOT_FOUND(HttpStatus.NOT_FOUND, "동아리를 찾을 수 없습니다."),
+
     // General
     INVALID_REQUEST(HttpStatus.BAD_REQUEST, "잘못된 요청입니다.");
 
