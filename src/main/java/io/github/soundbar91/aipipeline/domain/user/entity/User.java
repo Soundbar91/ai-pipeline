@@ -1,5 +1,6 @@
 package io.github.soundbar91.aipipeline.domain.user.entity;
 
+import io.github.soundbar91.aipipeline.domain.club.entity.Club;
 import io.github.soundbar91.aipipeline.domain.school.entity.School;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -44,6 +45,10 @@ public class User {
     @JoinColumn(name = "school_id")
     private School school;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "club_id")
+    private Club club;
+
     @Column(name = "department")
     private String department;
 
@@ -75,5 +80,9 @@ public class User {
         this.studentId = studentId;
         this.school = school;
         this.status = UserStatus.ACTIVE;
+    }
+
+    public void updateClub(Club club) {
+        this.club = club;
     }
 }
