@@ -6,6 +6,14 @@ In this project, Claude assists with backend development by committing on a per-
 
 ---
 
+## Language & Communication
+
+- All prompts from the user are written in **Korean**.
+- Claude must **think and reason in English** internally for accuracy and consistency.
+- All responses and outputs to the user must be delivered in **Korean**.
+
+---
+
 ## Branch Strategy
 
 | Branch | Description |
